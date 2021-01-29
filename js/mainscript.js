@@ -52,9 +52,18 @@ function updateAllValues(){
     //Total value calculator
     let total = subTotal + vat;
     document.getElementById("totalValue").innerText = total;
-
-
-
-
-
 }
+
+
+// Book Now Pop Up
+document.getElementById("bookNow").addEventListener("click", function(){
+    const firstClassNumber = document.getElementById("firstClassInput").value;
+    const economyClassNumber = document.getElementById("economyClassInput").value;
+    const totalCost = document.getElementById("totalValue").innerText;
+    alert(
+        "You have bought \n"+ firstClassNumber + " First Class ticket(s) \n"
+        + economyClassNumber + " Economy Class ticket(s)\n"
+        + "Your total cost is: $" + totalCost + " (including 10% VAT)"
+        )
+
+})
